@@ -22,4 +22,4 @@ COPY --from=build /venv /venv
 COPY --chown=app:app . .
 USER app
 EXPOSE 8000
-CMD ["sh", "-c", "exec uvicorn app.server:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "exec uvicorn app.server:app --host 0.0.0.0 --port ${PORT} --no-access-log"]

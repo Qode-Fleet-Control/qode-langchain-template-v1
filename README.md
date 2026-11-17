@@ -20,7 +20,7 @@ trusting it.
 |---|---|
 | install | `python3 -m venv .venv && .venv/bin/pip install --upgrade pip -r requirements.txt` |
 | build | `(none)` |
-| start | `.venv/bin/uvicorn app.server:app --host 0.0.0.0 --port $PORT` |
+| start | `.venv/bin/uvicorn app.server:app --host 0.0.0.0 --port $PORT --no-access-log` |
 
     ./bin/run       # install, build, start in the foreground
     ./bin/start     # start from existing build artifacts
